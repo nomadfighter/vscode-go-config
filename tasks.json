@@ -1,0 +1,25 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "go",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "options": {
+        "env": {
+            "GOPATH" : "${workspaceRoot}"
+        }
+    },
+    "tasks" : [
+        {
+            "taskName" : "build",
+            "isBuildCommand": true,
+            "args": ["build", "./src/example/exptcpserver/"]
+        },
+        {
+            "taskName" : "env",
+            "args": ["env"]
+        }
+    ]
+}
